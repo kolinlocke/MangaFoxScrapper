@@ -90,7 +90,6 @@ namespace MangaFoxScrapper
             };
 
             Parallel.For(0, Pages, this.DownloadPage);
-            //this.DownloadPage(1);
         }
 
         DownloadPage_Params mDownloadPage_Params;

@@ -45,8 +45,8 @@
             // 
             // Txt_EndPointIPAddress
             // 
-            this.Txt_EndPointIPAddress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.Txt_EndPointIPAddress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_EndPointIPAddress.Location = new System.Drawing.Point(12, 26);
             this.Txt_EndPointIPAddress.Name = "Txt_EndPointIPAddress";
             this.Txt_EndPointIPAddress.Size = new System.Drawing.Size(259, 20);
@@ -100,10 +100,11 @@
             // 
             // Txt_Chapters
             // 
-            this.Txt_Chapters.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.Txt_Chapters.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_Chapters.Location = new System.Drawing.Point(11, 202);
+            this.Txt_Chapters.MaxLength = 0;
             this.Txt_Chapters.Multiline = true;
             this.Txt_Chapters.Name = "Txt_Chapters";
             this.Txt_Chapters.Size = new System.Drawing.Size(259, 130);
@@ -130,8 +131,8 @@
             // 
             // Txt_Url
             // 
-            this.Txt_Url.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.Txt_Url.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_Url.Location = new System.Drawing.Point(12, 100);
             this.Txt_Url.Name = "Txt_Url";
             this.Txt_Url.Size = new System.Drawing.Size(259, 20);
@@ -157,8 +158,8 @@
             // 
             // Cmb_Site
             // 
-            this.Cmb_Site.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.Cmb_Site.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Cmb_Site.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cmb_Site.FormattingEnabled = true;
             this.Cmb_Site.Location = new System.Drawing.Point(43, 52);

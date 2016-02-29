@@ -68,6 +68,7 @@
     <Compile Include="MangaScrapper_MangaFox.cs" />
     <Compile Include="MangaScrapper_MangaHere.cs" />
     <Compile Include="MangaScrapper_MangaPanda.cs" />
+    <Compile Include="MangaScrapper_QuestionableContent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

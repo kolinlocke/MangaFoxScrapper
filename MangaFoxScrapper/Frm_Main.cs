@@ -14,6 +14,7 @@ namespace MangaFoxScrapper
         const String Cns_MangaFox = "MangaFox";
         const String Cns_MangaHere = "MangaHere";
         const String Cns_MangaPanda = "MangaPanda";
+        const String Cns_QuestionableContent = "QuestionableContent";
 
         Interface_MangaScrapper mMangaScrapper;
 
@@ -31,6 +32,7 @@ namespace MangaFoxScrapper
             Sites.Add(Cns_MangaFox);
             Sites.Add(Cns_MangaHere);
             Sites.Add(Cns_MangaPanda);
+            Sites.Add(Cns_QuestionableContent);
 
             this.Cmb_Site.DataSource = Sites;
         }
@@ -95,6 +97,9 @@ namespace MangaFoxScrapper
                     break;
                 case Cns_MangaPanda:
                     MangaScrapper = new MangaScrapper_MangaPanda();
+                    break;
+                case Cns_QuestionableContent:
+                    MangaScrapper = new MangaScrapper_QuestionableContent();
                     break;
             }
 
