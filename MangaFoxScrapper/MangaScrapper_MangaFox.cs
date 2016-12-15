@@ -156,7 +156,10 @@ namespace MangaFoxScrapper
                     {
                         Uri Uri_Source = new Uri(Url);
 
-                        FileInfo Fi_Source = new FileInfo(Strings.Mid(Img_Url, Strings.InStrRev(Img_Url, @"/") + 1));
+                        String FileName_Source = Strings.Mid(Img_Url, Strings.InStrRev(Img_Url, @"/") + 1);
+                        FileName_Source = Strings.Mid(FileName_Source, 1, Strings.InStrRev(FileName_Source, @"?") - 1);
+
+                        FileInfo Fi_Source = new FileInfo(FileName_Source);
                         FileInfo Fi_Target = new FileInfo(FilePath.TrimEnd('\\') + @"\" + Chapter + @"\" + Fi_Source.Name);
                         if (!Fi_Target.Directory.Exists)
                         { Fi_Target.Directory.Create(); }
