@@ -45,3 +45,15 @@ D:\Projects\Current\MangaFoxScrapper\MangaFoxScrapper\obj\x86\Debug\MangaFoxScra
 \\janerad\Shared\MangaFoxScrapper\MangaFoxScrapper\obj\x86\Debug\MangaFoxScrapper.csproj.GenerateResource.Cache
 D:\ex\Ex Projects\MangaFoxScrapper\MangaFoxScrapper\obj\x86\Debug\MangaFoxScrapper.csprojResolveAssemblyReference.cache
 D:\ex\Ex Projects\MangaFoxScrapper\MangaFoxScrapper\obj\x86\Debug\MangaFoxScrapper.Frm_Main.resources
+C:\My.Files\Stuff\Ex Projects\MangaFoxScrapper\MangaFoxScrapper\obj\x86\Debug\MangaFoxScrapper.exe
+C:\My.Files\Stuff\Ex Projects\MangaFoxScrapper\MangaFoxScrapper\obj\x86\Debug\MangaFoxScrapper.pdb
+C:\My.Files\Stuff\Ex Projects\MangaFoxScrapper\MangaFoxScrapper\bin\Debug\MangaFoxScrapper.exe
+C:\My.Files\Stuff\Ex Projects\MangaFoxScrapper\MangaFoxScrapper\bin\Debug\MangaFoxScrapper.pdb
+C:\My.Files\Stuff\Ex Projects\MangaFoxScrapper\MangaFoxScrapper\bin\Debug\HtmlAgilityPack.dll
+C:\My.Files\Stuff\Ex Projects\MangaFoxScrapper\MangaFoxScrapper\bin\Debug\HtmlAgilityPack.pdb
+C:\My.Files\Stuff\Ex Projects\MangaFoxScrapper\MangaFoxScrapper\bin\Debug\HtmlAgilityPack.xml
+C:\My.Files\Stuff\Ex Projects\MangaFoxScrapper\MangaFoxScrapper\obj\x86\Debug\MangaFoxScrapper.csprojResolveAssemblyReference.cache
+C:\My.Files\Stuff\Ex Projects\MangaFoxScrapper\MangaFoxScrapper\obj\x86\Debug\MangaFoxScrapper.Form1.resources
+C:\My.Files\Stuff\Ex Projects\MangaFoxScrapper\MangaFoxScrapper\obj\x86\Debug\MangaFoxScrapper.Frm_Main.resources
+C:\My.Files\Stuff\Ex Projects\MangaFoxScrapper\MangaFoxScrapper\obj\x86\Debug\MangaFoxScrapper.Properties.Resources.resources
+C:\My.Files\Stuff\Ex Projects\MangaFoxScrapper\MangaFoxScrapper\obj\x86\Debug\MangaFoxScrapper.csproj.GenerateResource.Cache

@@ -8,6 +8,7 @@ using System.IO;
 using Microsoft.VisualBasic;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
+using HtmlAgilityPack;
 
 namespace MangaFoxScrapper
 {
@@ -20,12 +21,17 @@ namespace MangaFoxScrapper
 
         public Common_Objects.Chapters GetChapters(string Url, string IPAddress_EndPoint)
         {
+            /*
             String HtmlSource;
             using (var wc = new Common_Objects.GZipWebClient(IPAddress_EndPoint))
             { HtmlSource = wc.DownloadString(Url); }
 
             HtmlAgilityPack.HtmlDocument Hd = new HtmlAgilityPack.HtmlDocument();
             Hd.LoadHtml(HtmlSource);
+            */
+
+            HtmlWeb Hw = new HtmlWeb();
+            var Hd = Hw.Load(Url);
 
             var Nodes = Hd.DocumentNode.SelectNodes("//div");
             var Node_Chapters =
@@ -83,7 +89,11 @@ namespace MangaFoxScrapper
 
             HtmlAgilityPack.HtmlDocument Hd = new HtmlAgilityPack.HtmlDocument();
             Hd.LoadHtml(html);
-
+            
+            /*
+            HtmlWeb Hw = new HtmlWeb();
+            var Hd = Hw.Load(Url);
+            */
             var Nds_Script = Hd.DocumentNode.SelectNodes("//script");
             var Nd_Script = Nds_Script.FirstOrDefault(O => O.InnerText.Contains("var total_pages"));
             Regex R = new Regex(@"var total_pages=[0-9]*;");
@@ -134,15 +144,19 @@ namespace MangaFoxScrapper
                     String Chapter = this.mDownloadPage_Params.Chapter;
                     String IPEndPoint_IPAdress = this.mDownloadPage_Params.IPAddress_EndPoint;
 
-                    //var Hw = new HtmlWeb();
-                    //var Hd = Hw.Load(Chapter_Url + Page_Ct + @".html");
+                    /*
+                    var Hw = new HtmlWeb();
+                    var Hd = Hw.Load(Chapter_Url + Page_Ct + @".html");
+                    */
 
+                    
                     String html;
                     using (var wc = new Common_Objects.GZipWebClient(IPEndPoint_IPAdress))
                     { html = wc.DownloadString(Chapter_Url + Page_Ct + @".html"); }
 
                     HtmlAgilityPack.HtmlDocument Hd = new HtmlAgilityPack.HtmlDocument();
                     Hd.LoadHtml(html);
+                    
 
                     var Nds = Hd.DocumentNode.SelectNodes("//div");
                     var Nd_Viewer =
