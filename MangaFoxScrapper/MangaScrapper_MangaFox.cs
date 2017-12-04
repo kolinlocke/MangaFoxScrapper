@@ -46,17 +46,19 @@ namespace MangaFoxScrapper
             {
                 if (Item_Link.Attributes.Contains("href"))
                 {
-                    if (Item_Link.Attributes["href"].Value.StartsWith(@"http://mangafox.me/manga/")
-                        || Item_Link.Attributes["href"].Value.StartsWith(@"/mangafox.me/manga/"))
+                    if (Item_Link.Attributes["href"].Value.StartsWith(@"https://mangafox.me/manga/")
+                        || Item_Link.Attributes["href"].Value.StartsWith(@"//mangafox.me/manga/"))
                     {
-                        if (Item_Link.Attributes["href"].Value.StartsWith(@"http://mangafox.me/manga/"))
+                        if (Item_Link.Attributes["href"].Value.StartsWith(@"https://mangafox.me/manga/"))
                         {
                             List_Links.Add(Item_Link.Attributes["href"].Value);
                         }
                         else
                         {
-                            Uri Uri_Source = new Uri(Url);
-                            List_Links.Add("http://" + Uri_Source.Host + Item_Link.Attributes["href"].Value);
+                            //Uri Uri_Source = new Uri(Url);
+                            //List_Links.Add("https://" + Uri_Source.Host + Item_Link.Attributes["href"].Value);
+
+                            List_Links.Add("https:" + Item_Link.Attributes["href"].Value);
                         }
                     }
                 }
@@ -94,6 +96,7 @@ namespace MangaFoxScrapper
             HtmlWeb Hw = new HtmlWeb();
             var Hd = Hw.Load(Url);
             */
+
             var Nds_Script = Hd.DocumentNode.SelectNodes("//script");
             var Nd_Script = Nds_Script.FirstOrDefault(O => O.InnerText.Contains("var total_pages"));
             Regex R = new Regex(@"var total_pages=[0-9]*;");
@@ -142,7 +145,7 @@ namespace MangaFoxScrapper
                     String Chapter_Url = this.mDownloadPage_Params.Chapter_Url;
                     String FilePath = this.mDownloadPage_Params.FilePath;
                     String Chapter = this.mDownloadPage_Params.Chapter;
-                    String IPEndPoint_IPAdress = this.mDownloadPage_Params.IPAddress_EndPoint;
+                    String IPEndPoint_IPAddress = this.mDownloadPage_Params.IPAddress_EndPoint;
 
                     /*
                     var Hw = new HtmlWeb();
@@ -151,7 +154,8 @@ namespace MangaFoxScrapper
 
                     
                     String html;
-                    using (var wc = new Common_Objects.GZipWebClient(IPEndPoint_IPAdress))
+                    using (var wc = new Common_Objects.GZipWebClient(IPEndPoint_IPAddress))
+                    //using (var wc = new WebClient() { BaseAddress = IPEndPoint_IPAdress })
                     { html = wc.DownloadString(Chapter_Url + Page_Ct + @".html"); }
 
                     HtmlAgilityPack.HtmlDocument Hd = new HtmlAgilityPack.HtmlDocument();
@@ -171,7 +175,8 @@ namespace MangaFoxScrapper
                         Uri Uri_Source = new Uri(Url);
 
                         String FileName_Source = Strings.Mid(Img_Url, Strings.InStrRev(Img_Url, @"/") + 1);
-                        FileName_Source = Strings.Mid(FileName_Source, 1, Strings.InStrRev(FileName_Source, @"?") - 1);
+                        if (FileName_Source.Contains(@"?"))
+                        { FileName_Source = Strings.Mid(FileName_Source, 1, Strings.InStrRev(FileName_Source, @"?") - 1); }
 
                         FileInfo Fi_Source = new FileInfo(FileName_Source);
                         FileInfo Fi_Target = new FileInfo(FilePath.TrimEnd('\\') + @"\" + Chapter + @"\" + Fi_Source.Name);

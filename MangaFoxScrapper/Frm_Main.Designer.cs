@@ -63,7 +63,7 @@
             // 
             // Btn_Download
             // 
-            this.Btn_Download.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Btn_Download.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Download.Location = new System.Drawing.Point(195, 377);
             this.Btn_Download.Name = "Btn_Download";
             this.Btn_Download.Size = new System.Drawing.Size(75, 23);
@@ -83,7 +83,8 @@
             // 
             // Txt_Path
             // 
-            this.Txt_Path.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Txt_Path.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_Path.Location = new System.Drawing.Point(11, 351);
             this.Txt_Path.Name = "Txt_Path";
             this.Txt_Path.Size = new System.Drawing.Size(259, 20);
@@ -112,6 +113,7 @@
             // 
             // Btn_Chapters
             // 
+            this.Btn_Chapters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Chapters.Location = new System.Drawing.Point(196, 126);
             this.Btn_Chapters.Name = "Btn_Chapters";
             this.Btn_Chapters.Size = new System.Drawing.Size(75, 23);
@@ -187,7 +189,7 @@
             this.Controls.Add(this.label1);
             this.MinimumSize = new System.Drawing.Size(300, 450);
             this.Name = "Frm_Main";
-            this.Text = "Frm_Main";
+            this.Text = "Manga Scrapper";
             this.ResumeLayout(false);
             this.PerformLayout();
 
