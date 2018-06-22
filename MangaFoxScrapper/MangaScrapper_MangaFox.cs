@@ -46,10 +46,10 @@ namespace MangaFoxScrapper
             {
                 if (Item_Link.Attributes.Contains("href"))
                 {
-                    if (Item_Link.Attributes["href"].Value.StartsWith(@"https://mangafox.me/manga/")
-                        || Item_Link.Attributes["href"].Value.StartsWith(@"//mangafox.me/manga/"))
+                    if (Item_Link.Attributes["href"].Value.StartsWith(@"https://fanfox.net/manga/")
+                        || Item_Link.Attributes["href"].Value.StartsWith(@"//fanfox.net/manga/"))
                     {
-                        if (Item_Link.Attributes["href"].Value.StartsWith(@"https://mangafox.me/manga/"))
+                        if (Item_Link.Attributes["href"].Value.StartsWith(@"https://fanfox.net/manga/"))
                         {
                             List_Links.Add(Item_Link.Attributes["href"].Value);
                         }
